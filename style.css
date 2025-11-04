@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.resume-container {
+    width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    background-color: #e6f7f0; /* Light green background */
+    padding: 20px 40px;
+    align-items: center;
+    border-bottom: 2px solid #ccc; /* Separator line */
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-info {
+    flex-grow: 1;
+    color: #333;
+}
+
+.contact-info h1 {
+    margin: 0;
+    font-size: 2.2em;
+    color: #333;
+    padding-bottom: 5px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p i {
+    margin-right: 10px;
+    color: #007bff; /* A nice blue for icons */
+    font-size: 1.1em;
+}
+
+/* General Section Styling */
+.section {
+    padding: 20px 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    color: #007bff; /* Consistent blue for section titles */
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff; /* Underline for section titles */
+    display: inline-block; /* Makes the border only as wide as the text */
+    padding-bottom: 5px;
+}
+
+/* Objective and Skills */
+.section p {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section ul li {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+    position: relative;
+    padding-left: 20px; /* Space for custom bullet */
+}
+
+.section ul li::before {
+    content: "•"; /* Custom bullet point */
+    color: #007bff;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Education Section Specifics */
+.education-item {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    margin-bottom: 10px;
+    align-items: baseline;
+}
+
+.education-item .year {
+    width: 120px;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.education-item .year span {
+    color: #007bff; /* Blue for the bullet */
+    margin-right: 5px;
+}
+
+.education-item .level {
+    width: 100px; /* Adjust as needed */
+    font-size: 0.95em;
+}
+
+.education-item .institution {
+    flex-grow: 1;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.education-item .details {
+    width: calc(100% - 220px); /* Adjust based on year and level widths */
+    margin-left: 220px; /* Align details below institution */
+    font-size: 0.9em;
+    color: #555;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Seminars and Workshops */
+.seminars ul li::before {
+    content: "•";
+}
+
+/* Horizontal line for the end of the resume */
+.resume-container > .section.seminars + .section { /* Target a section after seminars, if you add more */
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    padding-top: 20px;
+}
